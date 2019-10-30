@@ -1,5 +1,5 @@
 # Mnmal-One - Multipurpose One Page Jekyll Theme
-[Mnmal-One](https://elumina.me/freebie-for-webdesigners-mnmal-one-jekyll-theme/) is a minimalist one page Jekyll theme with sleek typography, abundant white-space, and carefully crafted code. It allows designers and developers to start a new website for any kind of client with ease.
+[Mnmal-One](https://elumina.me/freebie-for-webdesigners-mnmal-one-jekyll-theme/) is a minimalist one page Jekyll theme with sleek typography, abundant white-space, and carefully crafted code. It allows designers and developers to start a new website for any kind of client with ease. **[Demo](https://jekyll.elumina.me/)**
 
 
 ## Features
