@@ -1,0 +1,172 @@
+#main_nav {
+  background-color: $c-main_bg;
+  border-bottom: 1px solid $c-hr;
+  & > .container-fluid {
+    padding: 24px;
+    @media (min-width: $vp-md) {
+      padding: 32px;
+    }
+    & > .row {
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+  }
+}
+
+//
+// https://jonsuh.com/hamburgers/
+//
+.menu-toggler {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  right: 24px;
+  display: none;
+  @media (min-width: $vp-md) {
+    right: 32px;
+  }
+}
+.hamburger-inner {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin-top: 0;
+  border-radius: 2px;
+  background-color: $c-text;
+  transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+  transition-duration: 75ms;
+  transition-property: transform;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    left: 0;
+    border-radius: 2px;
+    background-color: $c-text;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-duration: 75ms;
+    transition-property: transform;
+  }
+  &:before {
+    top: -8px;
+    transition: top 75ms ease .12s,opacity 75ms ease;
+  }
+  &:after {
+    bottom: -8px;
+    transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+  }
+}
+.is-active {
+  .hamburger-inner {
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: rotate(45deg);
+    &:before {
+      top: 0;
+      transition: top 75ms ease,opacity 75ms ease .12s;
+      opacity: 0;
+    }
+    &:after {
+      bottom: 0;
+      transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.toggle-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform .3s ease-in-out;
+  will-change: transform;
+  display: block;
+  z-index: 9999;
+  background-color: $c-text;
+}
+&.open {
+  transform: translateX(0rem);
+}
+.nav-links {
+  text-align: left;
+  & > a,
+  & > a:visited {
+    padding: 16px 32px;
+    display: block;
+    color: $mobile_menu-font_color;
+    font-size: $mobile_menu-font_size;
+    font-family: $menu-font_family;
+    &:hover {
+      color: $mobile_menu-font_color_hover;
+    }
+  }
+}
+.menu-toggler {
+  display: block;
+}
+@media (min-width: $mobile_menu-vp) {
+  .toggle-menu {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    max-width: auto;
+    overflow-y: auto;
+    transform: none;
+    transition: none;
+    will-change: transform;
+    display: inherit;
+    z-index: 9999;
+    background-color: transparent;
+  }
+  .nav-links {
+    text-align: right;
+    & > a,
+    & > a:visited {
+      display: inline;
+      padding: 16px;
+      letter-spacing: 0;
+      font-size: $menu-font_size;
+      color: $menu-font_color;
+      &:last-child {
+        padding: 16px 0 16px 16px;
+      }
+      &:hover {
+        color: $menu-font_color_hover;
+      }
+    }
+  }
+  .menu-toggler {
+    display: none;
+  }
+}
+
+.nav-logo {
+  max-width: $logo-xs-max_width;
+  @media (min-width: $vp-sm) {
+    max-width: $logo-sm-max_width;
+  }
+  @media (min-width: $vp-md) {
+    max-width: $logo-md-max_width;
+  }
+  @media (min-width: $vp-lg) {
+    max-width: $logo-lg-max_width;
+  }
+  @media (min-width: $vp-xl) {
+    max-width: $logo-xl-max_width;
+  }
+  @media (min-width: $vp-xxl) {
+    max-width: $logo-xxl-max_width;
+  }
+}

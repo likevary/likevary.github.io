@@ -1,0 +1,33 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "critical": "^1.3.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-download": "0.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.6.5",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-pngquant": "^5.1.0",
+    "imagemin-svgo": "^6.0.0",
+    "imagemin-zopfli": "^5.1.0",
+    "request-progress": "3.0.0",
+    "sharp": "^0.20.2",
+    "yargs": "^11.0.0"
+  },
+  "dependencies": {}
+}

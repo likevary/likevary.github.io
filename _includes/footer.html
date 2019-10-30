@@ -1,0 +1,119 @@
+<footer class="footer {% if site.layout.boxed == true %}boxed-footer{% endif %}">
+  <div class="footer-wrapper">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12 pt-10 pb-10">
+
+          <div class="widget-content ta-center mb-1">
+            <nav class="social">
+              {% if site.publisher_data.facebook_username %}
+                <a class="social-link h2 d-inline_block lh-none mr-1" target="_blank" rel="external" href="https://www.facebook.com/{{ site.publisher_data.instagram_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-facebook-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.twitter_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://www.twitter.com/{{ site.publisher_data.twitter_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-twitter-bird-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.google_plus_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://plus.google.com/{{ site.publisher_data.twitter_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-google-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.pinterest_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://pinterest.com/{{ site.publisher_data.pinterest_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-pinterest-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.linkedin_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://linkedin.com/{{ site.publisher_data.twitter_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-linkedin-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.tumblr_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://www.tumblr.com/{{ site.publisher_data.twitter_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-tumblr-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.soundcloud_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://soundcloud.com/{{ site.publisher_data.soundcloud_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-soundcloud-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.dribbble_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://dribbble.com/{{ site.publisher_data.twitter_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-dribbble-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.github_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://github.com/{{ site.publisher_data.github_username }}">
+                  <svg class="icon tc-blue">
+                    <use xlink:href="#social-github-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.youtube_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://www.youtube.com/{{ site.publisher_data.youtube_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-youtube-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.instagram_username %}
+                <a class="social-link h2 d-inline_block lh-none ml-1 mr-1" target="_blank" rel="external" href="https://www.instagram.com/{{ site.publisher_data.instagram_username }}">
+                  <svg class="icon">
+                    <use xlink:href="#social-instagram-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+              {% if site.publisher_data.site_xml_feed %}
+                <a class="social-link h2 d-inline_block lh-none ml-1" rel="external" href="{{ '/' | absolute_url }}feed.xml">
+                  <svg class="icon">
+                    <use xlink:href="#social-rss-circle"></use>
+                  </svg>
+                </a>
+              {% endif %}
+            </nav>
+          </div>
+
+          <p class="fs-smaller ta-center widget-content">{{ site.title | escape }} proudly created by <a href="{{ site.url }}">{{ site.publisher_data.name }}</a>. {{ site.publisher_data.year_started }} - {{ site.time | date: '%Y' }}</p>
+
+          <nav class="mt-5 ta-center">
+            <a href="{{ '/cookie-policy/' | absolute_url }}" class="fs-small lh-single pl-1 pr-1">Privacy Policy</a>
+            |
+            <a href="{{ '/cookie-policy/' | absolute_url }}" class="fs-small lh-single pl-1 pr-1">Cookie Policy</a>
+          </nav>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% include footer-scripts.html %}
+
+{% if site.layout.boxed == true %}
+</div>
+{% endif %}
+
+</body>
+</html>

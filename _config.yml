@@ -1,0 +1,111 @@
+# Mnmal-One site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Mnmal-One
+description: >- # this means to ignore newlines until next variable
+  Mnmal-One is a minimalist one page Jekyll theme with sleek typography, abundant white-space, and carefully crafted code.
+
+baseurl: ""
+url: "https://jekyll.elumina.me"
+
+publisher_data:
+  type: Organization
+  name: Elumina
+  slogan: Design means.
+  logo_2x: /assets/images/logo-mnmal-one@2x.png
+  logo: /assets/images/logo-mnmal-one.png
+  logo_width: 200  # without unit
+  logo_height: 47  # without unit
+  year_started: "2016"
+  dribbble_username:
+  facebook_username:
+  github_username:
+  google_plus_username:
+  instagram_username:
+  linkedin_username:
+  pinterest_username: elumina_me
+  soundcloud_username: elumina_me
+  twitter_username: elumina_me
+  tumblr_username:
+  youtube_username:
+  site_xml_feed: false  # true or false
+  email: email@elumina.me
+  favicon_2x: /assets/images/logo-favicon@2x.png
+  favicon: /assets/images/logo-favicon.png
+  favicon_width: 72  # without unit
+  favicon_height: 72 # without unit
+
+# Layout Settings
+layout:
+  boxed: true  # true or false
+  body_google_fonts: 'Montserrat+Alternates:300,900:latin'
+  heading_google_fonts: 'Lato:300,700:latin'
+
+# Load JS plugins
+js_plugins:
+  lightbox: true
+
+# Settings for jekyll-seo-tag
+author: Elumina
+logo: /assets/images/logo-mnmal-one.png
+
+twitter:
+  username: elumina_me
+  card: summary_large_image
+
+facebook:
+  app_id:
+  publisher:
+  admins:
+
+social:
+  name: Elumina
+  links:
+    - https://twitter.com/elumina_me/
+    - https://www.facebook.com/elumina.me/
+    - https://br.pinterest.com/elumina_me/
+    - https://soundcloud.com/elumina_me/
+
+google_analytics: "UA-2343917-28" # UA-XXXXXXX-XX
+
+webmaster_verifications:
+  google: mP282HQ4qqXGv11Xg_s1Ve4KgWgn_s7No31JRzAkhco
+  bing:
+  alexa:
+  yandex:
+  baidu:
+
+
+# Content Settings
+defaults:
+- scope:
+    path: '/blog/:title/'
+    type: posts
+  values:
+    layout: post
+    excerpt:
+- scope:
+    path: "/pages/"
+    type: pages
+  values:
+    layout: default
+
+include:
+  - _pages
+
+exclude:
+- node_modules
+- gulpfile.js
+- Gemfile
+- Gemfile.lock
+- package.json
+- package-lock.json
+- vendor
+
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

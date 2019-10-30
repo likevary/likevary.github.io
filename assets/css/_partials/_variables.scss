@@ -1,0 +1,162 @@
+// Colors
+$c-body_bg: #fafafa !default;
+$c-main_bg: #fff !default;
+$c-hr: #f0f0f0 !default;
+$c-hr_dark: #dadada !default;
+$c-text: #2d3232 !default;
+$c-link: #467396 !default;
+$c-link_hover: #FF683D !default;
+
+// Viewports
+$vp-xxl: 1680px !default;
+$vp-xl: 1200px !default;
+$vp-lg: 992px !default;
+$vp-md: 768px !default;
+$vp-sm: 576px !default;
+$vp-xs: 575px !default;
+$grid-breakpoints: (
+  sm:  $vp-sm,
+  md:  $vp-md,
+  lg:  $vp-lg,
+  xl:  $vp-xl,
+  xxl: $vp-xxl
+) !default;
+
+// Font Family
+$ff-body: 'Lato', sans-serif !default;
+$ff-heading: 'Montserrat Alternates', sans-serif !default;
+
+// Font Weight
+$fw-thin: 300 !default;
+$fw-extra_light: 300 !default;
+$fw-light: 300 !default;
+$fw-regular: 300 !default;
+$fw-semi_bold: 700 !default;
+$fw-bold: 700 !default;
+$fw-extra_bold: 900 !default;
+$fw-black: 900 !default;
+$fw-body: $fw-light !default;
+$fw-heading: $fw-black !default;
+
+// Font Size
+$fs-base-vp-xxl:  16px !default;
+$fs-base-vp-xl:   16px !default;
+$fs-base-vp-lg:   16px !default;
+$fs-base-vp-md:   14px !default;
+$fs-base-vp-sm:   14px !default;
+$fs-base-vp-xs:   14px !default;
+$fs-base:         1rem !default;
+$fs-h1:       $fs-base * 2.5 !default;
+$fs-h2:       $fs-base * 2 !default;
+$fs-h3:       $fs-base * 1.75 !default;
+$fs-h4:       $fs-base * 1.5 !default;
+$fs-h5:       $fs-base * 1.25 !default;
+$fs-h6:       $fs-base / 1.25 !default;
+$fs-small:    $fs-base / 1.25 !default;
+$fs-smaller:  $fs-base / 1.5 !default;
+$fs-smallest: $fs-base / 1.75 !default;
+$fs-big:      $fs-base * 3 !default;
+$fs-bigger:   $fs-base * 3.5 !default;
+$fs-biggest:  $fs-base * 4 !default;
+
+// Line Height
+$lh-none: 0 !default;
+$lh-single: 1 !default;
+$lh-lead: 1.25 !default;
+$lh-onehalf: 1.5 !default;
+$lh-normal: 1.8 !default;
+$lh-double: 2 !default;
+
+// Font Margin
+$fm-top: 2rem !default;
+$fm-bottom: 1rem !default;
+
+// Spacing
+$spacer: 8px !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0:  0,
+  1:  ($spacer),
+  2:  ($spacer * 2),
+  3:  ($spacer * 3),
+  4:  ($spacer * 4),
+  5:  ($spacer * 5),
+  6:  ($spacer * 6),
+  7:  ($spacer * 7),
+  8:  ($spacer * 8),
+  9:  ($spacer * 9),
+  10: ($spacer * 10),
+  11: ($spacer * 11),
+  12: ($spacer * 12),
+  13: ($spacer * 13),
+  14: ($spacer * 14),
+  15: ($spacer * 15),
+  16: ($spacer * 16),
+  17: ($spacer * 17),
+  18: ($spacer * 18),
+  19: ($spacer * 19),
+  20: ($spacer * 20),
+), $spacers);
+
+// Header
+$logo-xxl-max_width: 200px !default;
+$logo-xl-max_width: 200px !default;
+$logo-lg-max_width: 200px !default;
+$logo-md-max_width: 180px !default;
+$logo-sm-max_width: 160px !default;
+$logo-xs-max_width: 140px !default;
+$mobile_menu-vp: $vp-lg !default;  //from this point below
+$menu-font_family: $ff-body !default;
+$menu-font_size: $fs-base !default;
+$menu-font_color: $c-text !default;
+$menu-font_color_hover: $c-link_hover !default;
+$mobile_menu-font_size: $fs-h4 !default;
+$mobile_menu-font_color: $c-main_bg !default;
+$mobile_menu-font_color_hover: $c-link !default;
+
+// Footer
+$footer-height: 360px !default;
+$c-footer_title: $c-hr !default;
+$c-footer_text: $c-hr_dark !default;
+$c-footer_link: $c-main_bg !default;
+$c-footer_link_hover: $c-link !default;
+
+// Forms
+$input-color: $c-text;
+$input-font-family: $ff-body;
+$input-border: 1px solid $c-hr_dark;
+$input-background-color: $c-main_bg;
+$input-color_focus: $c-text;
+$input-border_focus: 1px solid $c-hr;
+$input-background-color_focus: $c-body_bg;
+
+// Buttons
+$btn_primary-color: $c-text !default;
+$btn_primary-border: 2px solid $c-text !default;
+$btn_primary-background_color: $c-body_bg !default;
+$btn_primary-color_hover: $c-body_bg !default;
+$btn_primary-border_hover: 2px solid $c-text !default;
+$btn_primary-background_color_hover: $c-text !default;
+
+$btn_secondary-color: $c-link_hover !default;
+$btn_secondary-border: 2px solid $c-link_hover !default;
+$btn_secondary-background_color: $c-body_bg !default;
+$btn_secondary-color_hover: $c-body_bg !default;
+$btn_secondary-border_hover: 2px solid $c-link_hover !default;
+$btn_secondary-background_color_hover: $c-link_hover !default;
+
+// Image gallery
+// Inpired by: https://github.com/xieranmaya
+$flexbin-row-height: 300px !default;
+$flexbin-space: 16px !default;
+
+$flexbin-tablet-max: 980px !default;
+$flexbin-row-height-tablet: 150px !default;
+$flexbin-space-tablet: $flexbin-space !default;
+
+$flexbin-phone-max: 400px !default;
+$flexbin-row-height-phone: 100px !default;
+$flexbin-space-phone: $flexbin-space !default;
+
+$hover-overlay-color: $c-main_bg !default;
+$hover-overlay-opacity: 0.8 !default;

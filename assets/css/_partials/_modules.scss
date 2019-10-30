@@ -1,0 +1,170 @@
+//
+// DIVIDERS
+//
+hr {
+  border: none;
+  border-top: 1px solid $c-hr_dark;
+}
+.hr {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: transparent;
+  &:before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 24px;
+    background-color: $c-text;
+  }
+  &.c-link:before {
+    background-color: $c-link;
+  }
+  &.c-link_hover:before {
+    background-color: $c-link_hover;
+  }
+  &.c-hr_dark:before {
+    background-color: $c-hr_dark;
+  }
+  &.c-hr:before {
+    background-color: $c-hr;
+  }
+  &.c-main_bg:before {
+    background-color: $c-main_bg;
+  }
+  &.c-body_bg:before {
+    background-color: $c-body_bg;
+  }
+  &.hr-center:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.hr-xs {
+  &:before {
+    width: 32px;
+  }
+}
+.hr-sm {
+  &:before {
+    width: 48px;
+  }
+}
+.hr-md {
+  &:before {
+    width: 64px;
+  }
+}
+.hr-lg {
+  &:before {
+    width: 96px;
+  }
+}
+
+//
+// BORDER RADIUS
+//
+.br-small {
+  border-radius: 4px;
+}
+.br-medium {
+  border-radius: 8px;
+}
+.br-big {
+  border-radius: 16px;
+}
+
+//
+// BOX SHADOW
+//
+.bs-small {
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.24);
+}
+.bs-medium {
+  box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.24);
+}
+.bs-big {
+  box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.24);
+}
+
+//
+// SMOOTH SCROLL
+//
+scroll-container {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  &:focus {
+    outline: none;
+  }
+}
+section:focus,
+div:focus,
+scroll-page:focus {
+  outline: none;
+}
+
+//
+// FORMS
+//
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+textarea {
+  width: 100%;
+  padding: .375rem .75rem;
+  background-color: $input-background-color;
+  background-clip: padding-box;
+  font-family: $input-font-family;
+  line-height: 1.5;
+  color: $input-color;
+  border: $input-border;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  &:focus {
+    outline: none;
+    background-color: $input-background-color_focus;
+    color: $input-color_focus;
+    border: $input-border_focus;
+  }
+}
+
+//
+// BUTTONS
+//
+.btn,
+.btn:visited {
+  display: inline-block;
+  background-color: $c-link;
+  border: 1px solid transparent;
+  padding: 5px 16px 7px;
+  color: $c-main_bg;
+  line-height: 1;
+  cursor: pointer;
+  transition: .4s;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $c-link;
+    color: $c-link;
+  }
+  &.btn-primary {
+    color: $btn_primary-color;
+    border: $btn_primary-border;
+    background-color: $btn_primary-background_color;
+    &:hover {
+      color: $btn_primary-color_hover;
+      border: $btn_primary-border_hover;
+      background-color: $btn_primary-background_color_hover;
+    }
+  }
+  &.btn-secondary {
+    color: $btn_secondary-color;
+    border: $btn_secondary-border;
+    background-color: $btn_secondary-background_color;
+    &:hover {
+      color: $btn_secondary-color_hover;
+      border: $btn_secondary-border_hover;
+      background-color: $btn_secondary-background_color_hover;
+    }
+  }
+}

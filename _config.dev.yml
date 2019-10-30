@@ -1,0 +1,13 @@
+# Overrides _config.yml on development environment
+url: "http://localhost:4000"
+
+disqus: ""
+
+google_analytics: ""
+
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:

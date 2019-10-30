@@ -1,0 +1,62 @@
+<div id="footer_scripts" class="d-none">
+  {% include icons/icons.svg %}
+  <!-- Load JS -->
+  <script async src="{{ '/assets/js/dist/main.js' | absolute_url }}"></script>
+
+  <!-- Load FONTS -->
+  <script>
+    WebFontConfig = {
+      google: {
+        families: [
+          '{{ site.layout.body_google_fonts }}',
+          {% if site.layout.heading_google_fonts != site.layout.body_google_fonts %}
+            '{{ site.layout.heading_google_fonts }}'
+          {% else %}
+            ''
+          {% endif %}
+        ]
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- Load CSS -->
+  <noscript id="deferred-styles">
+    <link href="{{ '/assets/css/style.css' | absolute_url }}" rel="stylesheet">
+    {% if site.js_plugins.lightbox %}
+    <link href="{{ '/assets/css/lightgallery.css' | absolute_url }}" rel="stylesheet">
+    {% endif %}
+  </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.getElementById('footer_scripts').appendChild(replacement);
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+
+  <!-- Load ANALYTICS -->
+  {% if jekyll.environment == "production" %}
+    {% include footer-analytics.html %}
+  {% endif %}
+
+  {% if site.js_plugins.lightbox %}
+  <!-- Load LIGHTBOX -->
+  <script async src="{{ '/assets/js/vendor/lg/lightgallery.min.js' | absolute_url }}"></script>
+  {% endif %}
+
+</div>

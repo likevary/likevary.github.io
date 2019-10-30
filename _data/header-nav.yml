@@ -1,0 +1,17 @@
+docs_list_title: Main Navigation
+docs:
+
+- title: About
+  url: '#about'
+
+- title: Services
+  url: '#services'
+
+- title: Portfolio
+  url: '#portfolio'
+
+- title: Mission
+  url: '#mission'
+
+- title: Contact
+  url: '#contact'
