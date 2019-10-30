@@ -340,6 +340,10 @@ a:hover.tc-link {
   font-weight: 300;
 }
 
+.fw-extra_light {
+  font-weight: 300;
+}
+
 .fw-light {
   font-weight: 300;
 }
@@ -350,6 +354,10 @@ a:hover.tc-link {
 
 .fw-bold {
   font-weight: 700;
+}
+
+.fw-extra_bold {
+  font-weight: 900;
 }
 
 .fw-black {
@@ -493,6 +501,10 @@ a:hover.tc-link {
     font-weight: 300;
   }
 
+  .fw-sm-extra_light {
+    font-weight: 300;
+  }
+
   .fw-sm-light {
     font-weight: 300;
   }
@@ -503,6 +515,10 @@ a:hover.tc-link {
 
   .fw-sm-bold {
     font-weight: 700;
+  }
+
+  .fw-sm-extra_bold {
+    font-weight: 900;
   }
 
   .fw-sm-black {
@@ -599,6 +615,10 @@ a:hover.tc-link {
     font-weight: 300;
   }
 
+  .fw-md-extra_light {
+    font-weight: 300;
+  }
+
   .fw-md-light {
     font-weight: 300;
   }
@@ -609,6 +629,10 @@ a:hover.tc-link {
 
   .fw-md-bold {
     font-weight: 700;
+  }
+
+  .fw-md-extra_bold {
+    font-weight: 900;
   }
 
   .fw-md-black {
@@ -705,6 +729,10 @@ a:hover.tc-link {
     font-weight: 300;
   }
 
+  .fw-lg-extra_light {
+    font-weight: 300;
+  }
+
   .fw-lg-light {
     font-weight: 300;
   }
@@ -715,6 +743,10 @@ a:hover.tc-link {
 
   .fw-lg-bold {
     font-weight: 700;
+  }
+
+  .fw-lg-extra_bold {
+    font-weight: 900;
   }
 
   .fw-lg-black {

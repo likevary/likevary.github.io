@@ -93,9 +93,9 @@
   display: block;
   z-index: 9999;
   background-color: $c-text;
-}
-&.open {
-  transform: translateX(0rem);
+  &.open {
+    transform: translateX(0rem);
+  }
 }
 .nav-links {
   text-align: left;
