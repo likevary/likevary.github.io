@@ -11,7 +11,7 @@ if ('ontouchstart' in document.documentElement) {
 function menuTogglerHeight() {
   var mnmalNavHeader = document.querySelector('#main_nav');
   var mnmalNavHeaderHeight = mnmalNavHeader.offsetHeight;
-  var mnmalToggleMenu = document.querySelector('#toggle_menu');
+//   var mnmalToggleMenu = document.querySelector('#toggle_menu');
   var mnmalIsBtnHidden = window.getComputedStyle(mnmalMobileMenuBtn).display;
 
   if(mnmalIsBtnHidden == 'block') {
