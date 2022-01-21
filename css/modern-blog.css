@@ -185,7 +185,7 @@
 }
 
 
-*,
+/*
 *:after,
 *:before {
 	-webkit-box-sizing: border-box;
@@ -257,7 +257,6 @@ a:focus {
 	height: 0;
 	pointer-events: none;
 }
-/* Header */
 
 .header {
 	padding: 2em 1em;
@@ -276,7 +275,8 @@ a:focus {
 	display: block;
 	padding: .5em 0 1em;
 	color: #999;
-}
+} */
+
 /* Top Navigation Style */
 
 .links {
