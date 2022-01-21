@@ -1,15 +1,12 @@
 {% if site.layout.boxed == true %}
-<div class="wrapper">
+<div class="wrapper container">
 {% endif %}
-  <div class="top-wrapper">
-
-
-
+  <div class="top-wrapper content">
+  <div class="pattern pattern--hidden"></div>
 <header class="bg-primary" id="main_nav">
   <!-- <div class="diag hero-diag"></div> -->
   <div class="container-fluid">
     <div class="row row-middle">
-
       <div class="col-auto">
         <a href="{{ '/' | absolute_url }}" class="d-block lh-none">
           <picture class="d-block lh-none nav-logo ">
@@ -18,22 +15,6 @@
           </picture>
         </a>
       </div>
-
-      <div id="toggle_menu" class="col-auto toggle-menu">
-        <nav class="nav-links">
-          {% for item in site.data.header-nav.docs %}
-            <a class="nav-link h5 p-lg fw-bold fw-lg-regular"  href="{{ item.url || absolute_url }}" title="{{ item.title }}">
-              {{ item.title }}
-            </a>
-         {% endfor %}
-        </nav>
-      </div>
-
-      <div class="menu-toggler mc-pointer" data-toggle="offcanvas">
-        <div class="hamburger-inner"> </div>
-        <span class="sr-only">Menu</span>
-      </div>
-
     </div>
   </div>
 </header>
