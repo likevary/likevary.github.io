@@ -60,11 +60,11 @@ var demo = (function (window) {
 
         _mapPolygons(pattern);
 
-        _bindCards();
+//         _bindCards();
 
-        _bindHashChange();
+//         _bindHashChange();
 
-        _triggerOpenCard('', _getHashFromURL(location.href));
+//         _triggerOpenCard('', _getHashFromURL(location.href));
     };
 
     /**
