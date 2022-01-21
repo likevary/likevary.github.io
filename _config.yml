@@ -49,7 +49,7 @@ js_plugins:
 
 # Settings for jekyll-seo-tag
 author: Like Vary
-logo: /assets/images/logo-mnmal-one.png
+logo:
 
 twitter:
   username:
