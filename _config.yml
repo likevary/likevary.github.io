@@ -1,33 +1,33 @@
-# Mnmal-One site settings
+# Like Vary site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Mnmal-One
+title: Like Vary
 description: >- # this means to ignore newlines until next variable
-  Mnmal-One is a minimalist one page Jekyll theme with sleek typography, abundant white-space, and carefully crafted code.
+  Like Vary is customized cosmetics.
 
 baseurl: ""
-url: "https://jekyll.elumina.me"
+url: "https://likevary.github.io"
 
 publisher_data:
   type: Organization
-  name: Elumina
-  slogan: Design means.
+  name: Like Vary
+  slogan: Customized Cosmetics.
   logo_2x: /assets/images/logo-mnmal-one@2x.png
   logo: /assets/images/logo-mnmal-one.png
   logo_width: 200  # without unit
   logo_height: 47  # without unit
-  year_started: "2016"
+  year_started: "2022"
   dribbble_username:
   facebook_username:
   github_username:
   google_plus_username:
   instagram_username:
   linkedin_username:
-  pinterest_username: elumina_me
-  soundcloud_username: elumina_me
-  twitter_username: elumina_me
+  pinterest_username:
+  soundcloud_username:
+  twitter_username:
   tumblr_username:
   youtube_username:
   site_xml_feed: false  # true or false
@@ -48,12 +48,12 @@ js_plugins:
   lightbox: true
 
 # Settings for jekyll-seo-tag
-author: Elumina
+author: Like Vary
 logo: /assets/images/logo-mnmal-one.png
 
 twitter:
-  username: elumina_me
-  card: summary_large_image
+  username:
+  card:
 
 facebook:
   app_id:
@@ -61,12 +61,8 @@ facebook:
   admins:
 
 social:
-  name: Elumina
+  name:
   links:
-    - https://twitter.com/elumina_me/
-    - https://www.facebook.com/elumina.me/
-    - https://br.pinterest.com/elumina_me/
-    - https://soundcloud.com/elumina_me/
 
 google_analytics: "UA-XXXXXXX-XX"
 
