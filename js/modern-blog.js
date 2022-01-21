@@ -10,9 +10,9 @@ var demo = (function (window) {
      */
     var SELECTORS = {
         pattern: '.pattern',
-        card: '.card',
-        cardImage: '.card__image',
-        cardClose: '.card__btn-close'
+//         card: '.card',
+//         cardImage: '.card__image',
+//         cardClose: '.card__btn-close'
     };
 
     /**
@@ -106,32 +106,32 @@ var demo = (function (window) {
      * Bind Card elements.
      * @private
      */
-    var _bindCards = function () {
+//     var _bindCards = function () {
 
-        var elements = $(SELECTORS.card);
+//         var elements = $(SELECTORS.card);
 
-        $.each(elements, function (card, i) {
+//         $.each(elements, function (card, i) {
 
-            var instance = new Card(i, card);
+//             var instance = new Card(i, card);
 
-            layout[i] = {
-                card: instance
-            };
+//             layout[i] = {
+//                 card: instance
+//             };
 
-            var $card = $(card);
-            $card.attr(ATTRIBUTES.index, i + '');
+//             var $card = $(card);
+//             $card.attr(ATTRIBUTES.index, i + '');
 
-            var cardImage = $card.find(SELECTORS.cardImage);
-            var cardClose = $card.find(SELECTORS.cardClose);
+//             var cardImage = $card.find(SELECTORS.cardImage);
+//             var cardClose = $card.find(SELECTORS.cardClose);
 
-            $(cardImage).on('click', function () {
-                location.hash = $card.attr(ATTRIBUTES.id);
-            });
-            $(cardClose).on('click', function () {
-                location.hash = '';
-            });
-        });
-    };
+//             $(cardImage).on('click', function () {
+//                 location.hash = $card.attr(ATTRIBUTES.id);
+//             });
+//             $(cardClose).on('click', function () {
+//                 location.hash = '';
+//             });
+//         });
+//     };
 
     /**
      * Create a sequence for the open or close animation and play.
@@ -140,71 +140,71 @@ var demo = (function (window) {
      * @private
      *
      */
-    var _playSequence = function (isOpenClick, id) {
+//     var _playSequence = function (isOpenClick, id) {
 
-        var card = layout[id].card;
+//         var card = layout[id].card;
 
-        // Prevent when card already open and user click on image.
-        if (card.isOpen && isOpenClick) {
-            return;
-        }
+//         // Prevent when card already open and user click on image.
+//         if (card.isOpen && isOpenClick) {
+//             return;
+//         }
 
-        // Create timeline for the whole sequence.
-        var sequence = new TimelineLite({paused: true});
+//         // Create timeline for the whole sequence.
+//         var sequence = new TimelineLite({paused: true});
 
-        var tweenOtherCards = _showHideOtherCards(id);
+//         var tweenOtherCards = _showHideOtherCards(id);
 
-        if (!card.isOpen) {
-            // Open sequence.
+//         if (!card.isOpen) {
+//             // Open sequence.
 
-            _setPatternBgImg($(this).find(SELECTORS.cardImage).find('image'));
+//             _setPatternBgImg($(this).find(SELECTORS.cardImage).find('image'));
 
-            sequence.add(tweenOtherCards);
-            sequence.add(card.openCard(_onCardMove), 0);
+//             sequence.add(tweenOtherCards);
+//             sequence.add(card.openCard(_onCardMove), 0);
 
-        } else {
-            // Close sequence.
+//         } else {
+//             // Close sequence.
 
-            var closeCard = card.closeCard();
-            var position = closeCard.duration() * 0.8; // 80% of close card tween.
+//             var closeCard = card.closeCard();
+//             var position = closeCard.duration() * 0.8; // 80% of close card tween.
 
-            sequence.add(closeCard);
-            sequence.add(tweenOtherCards, position);
-        }
+//             sequence.add(closeCard);
+//             sequence.add(tweenOtherCards, position);
+//         }
 
-        sequence.play();
-    };
+//         sequence.play();
+//     };
 
     /**
      * Show/Hide all other cards.
      * @param {number} id The id of the clcked card to be avoided.
      * @private
      */
-    var _showHideOtherCards = function (id) {
+//     var _showHideOtherCards = function (id) {
 
-        var TL = new TimelineLite;
+//         var TL = new TimelineLite;
 
-        var selectedCard = layout[id].card;
+//         var selectedCard = layout[id].card;
 
-        for (var i in layout) {
+//         for (var i in layout) {
 
-            if (layout.hasOwnProperty(i)) {
-                var card = layout[i].card;
+//             if (layout.hasOwnProperty(i)) {
+//                 var card = layout[i].card;
 
-                // When called with `openCard`.
-                if (card.id !== id && !selectedCard.isOpen) {
-                    TL.add(card.hideCard(), 0);
-                }
+//                 // When called with `openCard`.
+//                 if (card.id !== id && !selectedCard.isOpen) {
+//                     TL.add(card.hideCard(), 0);
+//                 }
 
-                // When called with `closeCard`.
-                if (card.id !== id && selectedCard.isOpen) {
-                    TL.add(card.showCard(), 0);
-                }
-            }
-        }
+//                 // When called with `closeCard`.
+//                 if (card.id !== id && selectedCard.isOpen) {
+//                     TL.add(card.showCard(), 0);
+//                 }
+//             }
+//         }
 
-        return TL;
-    };
+//         return TL;
+//     };
 
     /**
      * Add card image to pattern background.
@@ -225,24 +225,24 @@ var demo = (function (window) {
      * @param {Object} track The card sizes and position during the floating.
      * @private
      */
-    var _onCardMove = function (track) {
+//     var _onCardMove = function (track) {
 
-        var radius = track.width / 2;
+//         var radius = track.width / 2;
 
-        var center = {
-            x: track.x,
-            y: track.y
-        };
+//         var center = {
+//             x: track.x,
+//             y: track.y
+//         };
 
-        polygonMap.points.forEach(function (point, i) {
+//         polygonMap.points.forEach(function (point, i) {
 
-            if (_detectPointInCircle(point, radius, center)) {
-                $(polygonMap.paths[i]).attr('class', CLASSES.polygon + ' ' + CLASSES.polygonHidden);
-            } else {
-                $(polygonMap.paths[i]).attr('class', CLASSES.polygon);
-            }
-        });
-    };
+//             if (_detectPointInCircle(point, radius, center)) {
+//                 $(polygonMap.paths[i]).attr('class', CLASSES.polygon + ' ' + CLASSES.polygonHidden);
+//             } else {
+//                 $(polygonMap.paths[i]).attr('class', CLASSES.polygon);
+//             }
+//         });
+//     };
 
     /**
      * Detect if a point is inside a circle area.
@@ -265,43 +265,43 @@ var demo = (function (window) {
      * initialize page view according to hash
      * @private
      */
-    var _triggerOpenCard = function (fromId, toId) {
-        var getIndex = function (card) {
-            var index = $(card).attr(ATTRIBUTES.index);
-            return parseInt(index, 10);
-        };
-        if (fromId) {
-            var fromBlogCard = $('[' + ATTRIBUTES.id + '="' + fromId + '"]')[0];
-            if (fromBlogCard) {
-                _playSequence.call(fromBlogCard, false, getIndex(fromBlogCard));
-            }
-        }
-        if (toId) {
-            var toBlogCard = $('[' + ATTRIBUTES.id + '="' + toId + '"]')[0];
-            if (toBlogCard) {
-                _playSequence.call(toBlogCard, true, getIndex(toBlogCard));
-            }
-        }
-    };
+//     var _triggerOpenCard = function (fromId, toId) {
+//         var getIndex = function (card) {
+//             var index = $(card).attr(ATTRIBUTES.index);
+//             return parseInt(index, 10);
+//         };
+//         if (fromId) {
+//             var fromBlogCard = $('[' + ATTRIBUTES.id + '="' + fromId + '"]')[0];
+//             if (fromBlogCard) {
+//                 _playSequence.call(fromBlogCard, false, getIndex(fromBlogCard));
+//             }
+//         }
+//         if (toId) {
+//             var toBlogCard = $('[' + ATTRIBUTES.id + '="' + toId + '"]')[0];
+//             if (toBlogCard) {
+//                 _playSequence.call(toBlogCard, true, getIndex(toBlogCard));
+//             }
+//         }
+//     };
 
-    var _getHashFromURL = function (url) {
-        var a = document.createElement('a');
-        a.href = url;
-        return a.hash.slice(1);
-    };
+//     var _getHashFromURL = function (url) {
+//         var a = document.createElement('a');
+//         a.href = url;
+//         return a.hash.slice(1);
+//     };
 
-    var _bindHashChange = function () {
-        // Workaround for event.newURL and event.oldURL for Internet Explorer
-        // source: https://developer.mozilla.org/en/docs/Web/API/WindowEventHandlers/onhashchange
-        //let this snippet run before your hashchange event binding code
-        if(!window.HashChangeEvent)(function(){
-            var lastURL=document.URL;
-            window.addEventListener("hashchange",function(event){
-                Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
-                Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
-                lastURL=document.URL;
-            });
-        }());
+//     var _bindHashChange = function () {
+//         // Workaround for event.newURL and event.oldURL for Internet Explorer
+//         // source: https://developer.mozilla.org/en/docs/Web/API/WindowEventHandlers/onhashchange
+//         //let this snippet run before your hashchange event binding code
+//         if(!window.HashChangeEvent)(function(){
+//             var lastURL=document.URL;
+//             window.addEventListener("hashchange",function(event){
+//                 Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
+//                 Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
+//                 lastURL=document.URL;
+//             });
+//         }());
 
 
         window.addEventListener('hashchange', function (e) {
