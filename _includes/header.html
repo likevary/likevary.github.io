@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,22 @@
   {% seo %}
 
   <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | absolute_url }}">
-
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css"/>
+  <link rel="stylesheet" type="text/css" href="css/modern-blog.css"/>
+  
   <style>
     {% include critical/critical.css %}
   </style>
+  
+  <script>
+    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+      var root = document.getElementsByTagName('html')[0];
+      root.setAttribute('class', 'ff');
+    }
+  </script>
 </head>
 
-<body class="{{ page.body }} {{ page.layout }}">
+<body class="body {{ page.body }} {{ page.layout }}">
   <div id="css-support-msg"></div>
   {% include header-nav.html %}
