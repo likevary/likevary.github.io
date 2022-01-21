@@ -304,12 +304,12 @@ var demo = (function (window) {
 //         }());
 
 
-        window.addEventListener('hashchange', function (e) {
-            var newHash = _getHashFromURL(e.newURL);
-            var oldHash = _getHashFromURL(e.oldURL);
-            _triggerOpenCard(oldHash, newHash);
-        });
-    };
+//         window.addEventListener('hashchange', function (e) {
+//             var newHash = _getHashFromURL(e.newURL);
+//             var oldHash = _getHashFromURL(e.oldURL);
+//             _triggerOpenCard(oldHash, newHash);
+//         });
+//     };
 
     // Expose methods.
     return {
