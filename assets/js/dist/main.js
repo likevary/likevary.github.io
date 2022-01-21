@@ -6,31 +6,6 @@ if ('ontouchstart' in document.documentElement) {
 }
 
 //
-// TOGGLE HAMBURGER MENU
-//
-var mnmalMobileMenuBtn = document.querySelector('.menu-toggler'),
-    mnmalMobileMenu = document.querySelector('.toggle-menu'),
-    mnmalMobileMenuOpen = document.getElementsByClassName('nav-link');
-mnmalMobileMenuBtn.onclick = function() {
-  menuTogglerHeight();
-  mnmalMobileMenuBtn.classList.toggle('is-active');
-  mnmalMobileMenu.classList.toggle('open');
-  document.body.classList.toggle('ohidden');
-}
-for (var i = 0; i < mnmalMobileMenuOpen.length; ++i) {
-  var mnmalMenuItem = mnmalMobileMenuOpen[i];
-
-  mnmalMenuItem.onclick = function() {
-    if ( mnmalMobileMenu.classList.contains('open') ) {
-      mnmalMobileMenuBtn.classList.toggle('is-active');
-      mnmalMobileMenu.classList.toggle('open');
-      document.body.classList.toggle('ohidden');
-    }
-  }
-}
-
-
-//
 // MOBILE NAV
 //
 function menuTogglerHeight() {
