@@ -1,0 +1,23 @@
+{% include header.html %}
+
+  <main class="main">
+    <div class="pattern pattern--hidden"></div>
+    {{ content }}
+  </main>
+
+</div><!-- top-wrapper -->
+
+{% include footer-scripts.html %}
+
+{% if site.layout.boxed == true %}
+</div>
+{% endif %}
+
+<script type="text/javascript" src="/assert/js/step_one.js"></script>
+<script type="text/javascript" src="/js/vendors/html5.min.js"></script>
+<script src="/js/vendors/trianglify.min.js"></script>
+<script src="/js/vendors/cash.min.js"></script>
+<script src="/js/modern-blog.js"></script>
+
+</body>
+</html>
