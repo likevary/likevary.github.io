@@ -87,11 +87,6 @@ defaults:
     type: pages
   values:
     layout: default
-- scope:
-    path: "/test/step/one"
-    type: pages
-  values:
-    layout: step_one
 
 include:
   - _pages
