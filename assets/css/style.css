@@ -1009,3 +1009,16 @@ body {
     padding-bottom: 1rem;
   }
 }
+
+.btn-group {
+  margin-top: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clicked {
+  background-color: #2d3232;
+  color: #fff;
+}
+
+.item > p { pointer-events: none; }
