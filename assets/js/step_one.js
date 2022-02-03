@@ -24,57 +24,46 @@ function init() {
 init();
 
 document.addEventListener("DOMContentLoaded", function() {
-  let scores = {
-    type1: [],
-    type2: [],
-    type3: [],
-    type4: [],
-    type5: [],
-    type6: [],
-    type7: [],
-    type8: [],
-    type9: [],
-  };
+  let scores = [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
   const nextBtn = document.querySelector('#btn-next');
   const prevBtn = document.querySelector('#btn-prev');
 
-  localStorage.setItem("scores", JSON.stringify(scores));
-  localStorage.setItem("prevScores", JSON.stringify(scores));
+  localStorage.setItem("scores1", JSON.stringify(scores));
   
   function setScore(type) {
     switch (type) {
       case "01":
-        scores.type1.push(1);
+        scores[0] = 1;
         break;
       case "02":
-        scores.type1.push(1);
+        scores[0] = 1;
         break;
       case "03":
-        scores.type1.push(1);
+        scores[0] = 1;
         break;
       case "04":
-        scores.type2.push(1);
-        scores.type7.push(1);
-        scores.type8.push(1);
-        scores.type9.push(1);
+        scores[1] = 1;
+        scores[6] = 1;
+        scores[7] = 1;
+        scores[8] = 1;
         break;
       case "05":
-        scores.type2.push(1);
-        scores.type7.push(1);
-        scores.type8.push(1);
-        scores.type9.push(1);
+        scores[1] = 1;
+        scores[6] = 1;
+        scores[7] = 1;
+        scores[8] = 1;
         break;
       case "06":
-        scores.type2.push(1);
-        scores.type7.push(1);
-        scores.type8.push(1);
-        scores.type9.push(1);
+        scores[1] = 1;
+        scores[6] = 1;
+        scores[7] = 1;
+        scores[8] = 1;
         break;
       case "07":
-        scores.type2.push(1);
-        scores.type7.push(1);
-        scores.type8.push(1);
-        scores.type9.push(1);
+        scores[1] = 1;
+        scores[6] = 1;
+        scores[7] = 1;
+        scores[8] = 1;
         break;
   
       default:
@@ -87,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const { type } = target.dataset;
     
     await setScore(type);
-    await localStorage.setItem("scores", JSON.stringify(scores));
+    await localStorage.setItem("scores1", JSON.stringify(scores));
     window.location.href = '/test/step/two';
   });
 
