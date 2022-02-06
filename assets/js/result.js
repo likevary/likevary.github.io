@@ -151,43 +151,40 @@ const typeEl = document.createElement('span');
 
 function getType() {
   let totalScores = {
-    "type1": 0,
-    "type2": 0,
-    "type3": 0,
-    "type4": 0,
-    "type5": 0,
-    "type6": 0,
-    "type7": 0,
-    "type8": 0,
-    "type9": 0,
+    "Type1": 0,
+    "Type2": 0,
+    "Type3": 0,
+    "Type4": 0,
+    "Type5": 0,
+    "Type6": 0,
+    "Type7": 0,
+    "Type8": 0,
+    "Type9": 0,
   }
   let type = '';
   let max = 0;
     
-    for(let i = 1; i <= 7; i++) {
-      const scores = JSON.parse(localStorage.getItem("scores" + i));
+  for(let i = 1; i <= 7; i++) {
+    const scores = JSON.parse(localStorage.getItem("scores" + i));
 
-      for(let j = 0; j < scores.length; j++) {
-        let typeName = "type" + (j + 1);
+    for(let j = 0; j < scores.length; j++) {
+      let typeName = "Type" + (j + 1);
 
-        totalScores[typeName] += scores[j];
-      }
+      totalScores[typeName] += scores[j];
     }
+  }
 
-    console.log(Object.keys(totalScores))
+  for(let item in Object.keys(totalScores)) {
+    let temp = Object.values(totalScores)[item];
 
-    for(let item in Object.keys(totalScores)) {
-        console.log(Object.values(totalScores)[item])
-        let temp = Object.values(totalScores)[item];
-
-        if(temp > max || temp === max) {
-            max = temp;
-            type = Object.keys(totalScores)[item];
-        }
+    if(temp > max || temp === max) {
+      max = temp;
+      type = Object.keys(totalScores)[item];
     }
+  }
 
-    typeEl.innerHTML = type;
-    parentEl.appendChild(typeEl);
+  typeEl.innerHTML = type;
+  parentEl.appendChild(typeEl);
 }
 
 getType();

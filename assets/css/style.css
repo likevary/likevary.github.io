@@ -954,11 +954,11 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .main {
     margin-bottom: 360px;
   }
-}
+} */
 
 .footer {
   position: relative;
